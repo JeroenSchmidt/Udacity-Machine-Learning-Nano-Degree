@@ -39,6 +39,13 @@ class LearningAgent(Agent):
         # Update epsilon using a decay function of your choice
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
+        
+        if testing == True:
+            self.alpha = 0
+            self.epsilon = 0
+            
+        if testing == False:
+            self.epsilon = self.epsilon - 0.05
 
         return None
 
@@ -62,7 +69,7 @@ class LearningAgent(Agent):
         # With the hand-engineered features, this learning process gets entirely negated.
         
         # Set 'state' as a tuple of relevant data for the agent        
-        state = None
+        state = (waypoint, inputs['light'], inputs['left'], inputs['oncoming'])
 
         return state
 
@@ -75,10 +82,14 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Calculate the maximum Q-value of all actions for a given state
+        
+        state_actions = self.Q[state]
+        action = max(state_actions, key=state_actions.get)
+        maxQ = self.Q[state][action]
+        
+        return maxQ
+    
 
-        maxQ = None
-
-        return maxQ 
 
 
     def createQ(self, state):
@@ -90,7 +101,21 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
+        
+        states = self.Q 
+        
+        
+        if state not in states:
+            actions = self.valid_actions
 
+            q_values = {}
+            for action in actions:
+                action_dic = {action:0.0}    
+                q_values.update(action_dic) 
+            
+            state_dic = {state:q_values}
+            states.update(state_dic)                
+           
         return
 
 
@@ -109,15 +134,31 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # When not learning, choose a random action
+        
         # When learning, choose a random action with 'epsilon' probability
         # Otherwise, choose an action with the highest Q-value for the current state
         # Be sure that when choosing an action with highest Q-value that you randomly select between actions that "tie".
+               
         
         if self.learning == False:
             actions = self.valid_actions
             action = random.choice(actions)
         
-        
+        if self.learning == True:
+            
+            if self.epsilon > 0.01 and self.epsilon > random.random():
+                actions = self.valid_actions
+                action = random.choice(actions)
+            else:
+                max_q =self.get_maxQ(state)
+                tied_states = []
+                
+                for action, q_value in self.Q[state].iteritems():
+                    if max_q == q_value:
+                        tied_states.append(action)
+                
+                action = random.choice(tied_states)
+                
         return action
 
 
@@ -131,6 +172,14 @@ class LearningAgent(Agent):
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
+        if self.learning == True:
+            alpha = self.alpha
+            
+            q = self.Q[state][action]
+        
+            new_q = q + alpha*(reward-q)
+            
+            self.Q[state][action] = new_q
 
         return
 
@@ -167,7 +216,8 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent)
+    #agent = env.create_agent(LearningAgent)
+    agent = env.create_agent(LearningAgent,learning=True)
     
     ##############
     # Follow the driving agent
@@ -188,12 +238,15 @@ def run():
                     log_metrics=True,
                     display=False)
     
+    #sim = Simulator(env)
+    
     ##############
     # Run the simulator
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
     sim.run(n_test=10)
+    #sim.run()
 
 
 if __name__ == '__main__':
