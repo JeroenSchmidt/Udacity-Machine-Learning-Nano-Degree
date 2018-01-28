@@ -47,8 +47,10 @@ class LearningAgent(Agent):
             self.epsilon = 0
             
         if testing == False:
+            # linear decay
             #self.epsilon = self.epsilon - 0.05
 
+            # exponential decay
             self.epsilon = 0.99**self.trial
             self.trial += 1
 
@@ -245,9 +247,9 @@ def run():
     #                display=False)
 
     sim = Simulator(env,
-                    update_delay=0.01,
+                    update_delay=1,
                     log_metrics=True,
-                    display=False,
+                    display=True,
                     optimized=True)    
     
     #sim = Simulator(env)
