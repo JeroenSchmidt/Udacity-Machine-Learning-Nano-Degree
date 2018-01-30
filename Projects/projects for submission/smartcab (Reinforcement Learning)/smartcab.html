@@ -16602,21 +16602,30 @@ xAmWmZmZmZlZQZxgmZmZmZmZFcQJlpmZmZmZWUGcYJmZmZmZmRXECZaZmZmZmVlBnGCZmZmZmZkV
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The optimal policy dictated by the rules of the road with respect to the states defined should be:</p>
 <ul>
-<li><p>The trained agent should move toward to waypoint when it is safe</p>
+<li><p>If red light and smartcab wants to go straight it must stop.</p>
 </li>
-<li><p>It must stop at a red intersection</p>
-<ul>
-<li>If the agent wants to turn left it needs to give right of way to any dummy agent on the left hand side if the dummy car is moving forward.</li>
-</ul>
+<li><p>If red light and smartcab wants to go left it must stop.</p>
 </li>
-<li><p>It must move at a green intersection</p>
-<ul>
-<li>If the agent wants to turn left it must give right of way to a car opposite of it if the dummy agent is turning left (w.r.t. to dummy) or going forward (w.r.t to the dummy)</li>
-</ul>
+<li><p>If red light and the smartcab wants to go right and dummy agent on left if going straight then the smartcab must stop else the smartcab can turn right.</p>
 </li>
 </ul>
+<ul>
+<li><p>If green light and the smartcab wants to go straight then it may go straight</p>
+</li>
+<li><p>If green light and the smartcab wants to go right then it may go right</p>
+</li>
+<li><p>If green light and the smartcab wants to turn left and oncoming traffic is either going straight or right then the smartcab must stop else the smart cab may go left.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>As a recap; the states are defined as follows: {<code>waypoint</code>,<code>light</code>,<code>left</code>,<code>oncoming</code>}. The directions for <code>left</code> and <code>oncoming</code> are with respect to those dummy agents.</p>
 <p>After inspecting the sim_improved-learning logs it was determined that optimal actions from the optimal policy exist but the trained agent has also learned sub-optimal actions.</p>
 <p>For example:</p>
