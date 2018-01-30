@@ -1,6 +1,8 @@
 # Udacity Machine Learning Nano-degree
 This repo contains a collection of Jupyter Notebooks which form part of the project assignments for the Udacity [Machine Learning Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009). The notebooks are written in Python 2.7, but should be (mostly) compatible with Python 3.
 
+The source for these projects can be found [here](https://github.com/udacity/machine-learning).
+
 ## Contents
 Section | Project | Topics | Status
 --- | --- | --- | ---
