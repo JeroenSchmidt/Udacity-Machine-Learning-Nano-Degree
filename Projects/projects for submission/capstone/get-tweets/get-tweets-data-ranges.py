@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# use somthing like: python get-tweets-data-ranges.py --querysearch "etherium" --days "2017-06-02;2017-06-03"
+
 import sys,getopt,codecs, time, random
 from datetime import datetime, timedelta
 import boto
