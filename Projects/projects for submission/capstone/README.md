@@ -2,7 +2,7 @@
 ## Specializations
 ## Project: Capstone Proposal and Capstone Project
 
-
+## 1) Introduction
 This capstone project sought to see if it was possible to use Reddit and Twitter sentiment analysis related to Etherium and Bitcoin to predict price movement. This project consisted of three major parts;
 
 1) Acquiring the data through a combination of large-scale web scraping and downloading public data repositories
@@ -11,9 +11,9 @@ This capstone project sought to see if it was possible to use Reddit and Twitter
 4) Building and evaluating models based on the data I obtained 
 
 
-## Reproducing the work contained within
+## 2) Reproducing the work contained within
 
-#### Libraries Required
+#### 2.1) Libraries Required
 It is strongly encoraged to install the following libraries through conda:
 
 * `pyspark 2.3.1`
@@ -26,7 +26,7 @@ It is strongly encoraged to install the following libraries through conda:
 
 **NOTE: For pyspark to work correctly you need to have java8 set as your default java environment**
 
-#### Before you get started - DATA
+#### 2.2) Data Requirments 
 You will have to download preprocessed data required to reproduce the analysis and modelling results from the following [mega link](https://mega.nz/#F!6P4F2SyS!uoysyVGVysVy0UU-DJFx7Q), all the contents should be inserted into the data directory.
 
 The tree structure should look as follows:
@@ -51,7 +51,7 @@ data
             |-sentiment
 ```
 
-#### Explination of Notebooks
+#### 2.3) Explination of Notebooks
 
 ##### Primary Notebooks
 The following notebooks are directly related to the report that was written. The models, insights and graphs produced within these notebooks were used directly in the report. These notebooks can be run to reproduce the results discussed, assuming the processed data from the [mega link](https://mega.nz/#F!6P4F2SyS!uoysyVGVysVy0UU-DJFx7Q) is present in the data folder.
