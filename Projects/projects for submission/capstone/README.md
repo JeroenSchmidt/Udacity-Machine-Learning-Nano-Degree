@@ -57,7 +57,7 @@ data
 The following notebooks are directly related to the report that was written. The models, insights and graphs produced within these notebooks were used directly in the report. These notebooks can be run to reproduce the results discussed, assuming the processed data from the [mega link](https://mega.nz/#F!6P4F2SyS!uoysyVGVysVy0UU-DJFx7Q) is present in the data folder.
 
 1) The `analysis` folder contains notebooks that were used to understand better the data that was acquired. In it, you will find 3 notebooks, each dealing with a separate topic. Ticker price movement, sentiment scores, and ingested data volumes.  
-2) The `Main Project (ML + Feature Creation).ipynb` notebook is where the models were built and assessed. 
+2) The `Modeling_and_Evaluation.ipynb` notebook is where the models were built and assessed. 
 
 
 ##### Auxilary Notebooks
