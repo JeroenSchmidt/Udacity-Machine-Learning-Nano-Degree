@@ -1,9 +1,8 @@
 # Udacity Machine Learning Nano-degree
-This repo contains a collection of Jupyter Notebooks which form part of the project assignments for the Udacity [Machine Learning Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009). 
+This repo contains the collection of project assignments for the completed Udacity [Machine Learning Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009). 
 
-A capstone project titled **Application of Convolutions Neural Networks to Predict Crytocurrency Price Movement through Time-Series Ticker Data, and Social Media Sentiment Analysis** was also completed. The code can be found [here](./Projects/projects%20for%20submission/capstone) and the report can be found [here](./Projects/projects%20for%20submission/capstone/Capstone_Report.pdf)
-
-The source for these projects can be found [here](https://github.com/udacity/machine-learning).
+This program also required the completion of a capstone project of our own choosing. 
+I looked into **Predicting Etherium Prices using Reddit and Twitter Sentiments**. The code can be found [here](./Projects/projects%20for%20submission/capstone) and the report can be found [here](./Projects/projects%20for%20submission/capstone/Capstone_Report.pdf).
 
 ## Contents
 Section | Project | Topics | Status
