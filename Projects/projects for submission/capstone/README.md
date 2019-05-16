@@ -1,10 +1,12 @@
-# Machine Learning Engineer Nanodegree
-## Specializations
+# Predicting Etherium Prices using Reddit and Twitter Sentiments
 ## Project: Capstone Proposal and Capstone Project
 
 ## 1) Introduction
-This capstone project sought to see if it was possible to use Reddit and Twitter sentiment analysis related to Etherium and Bitcoin to predict price movement. This project consisted of three major parts;
+This capstone project looked into using Reddit and Twitter sentiment analysis with respect to Etherium and Bitcoin preices inorder to predict future Etherium price movement. 
 
+The report can be found [here](./Capstone_Report.pdf) and the propsal can be found [here](./Capstone_Proposal.pdf)
+
+This project consisted of three major parts;
 1) Acquiring the data through a combination of large-scale web scraping and downloading public data repositories
 2) Shaping and moulding the data to fit my objectives
 3) Performing analysis on the data
