@@ -6,7 +6,7 @@ The source for these projects can be found [here](https://github.com/udacity/mac
 ## Contents
 Section | Project | Topics | Status
 --- | --- | --- | ---
-Exploratory Project | [Titanic Survival Exploration](./Projects/projects%20for%20submission/titanic_survival_exploration) | intro to numpy, scipy, matplotlib, ipython | Done
+Exploratory Project | [Titanic Survival Exploration](/Projects/projects%20for%20submission/titanic_survival_exploration%20(ML%20Foundation%20-%20mini%20project)) | intro to numpy, scipy, matplotlib, ipython | Done
 Model Evaluation and Validation | [Predicting Boston Housing Prices](./Projects/projects%20for%20submission/boston_housing%20(ML%20Foundations%20-%20main%20project)) | data reprocessing, learning algorithms training and evaluation, grid search | Done
 Supervised Learning | [Finding Donors for CharityML](/Projects/projects%20for%20submission/finding_donors%20(Supervised%20Learning)) | practice and evaluate supervised learning algorithms using `sklearn` | Done
 Unsupervised Learning | [Creating Customer Segments](.Projects/projects%20for%20submission/customer_segments%20(Unsupervised%20Learning)) | data preprocessing, features PCA, data clustering, interpret clusters | Done
