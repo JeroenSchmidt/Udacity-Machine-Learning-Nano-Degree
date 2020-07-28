@@ -1,3 +1,5 @@
+![](images/udacity-logo.png)
+
 # Udacity Machine Learning Nano-degree
 This repo contains the collection of project assignments for the completed Udacity [Machine Learning Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009). 
 
